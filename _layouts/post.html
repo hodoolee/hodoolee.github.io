@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+{% assign author = site.authors[page.author] | default: site.authors.hodoo %}
+
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="author">
+    <small>{{ page.date | date: "%Y. %m. %d" }} | {{ author.nickname }}</small>
+    <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=40">
+  </div>
+  {% include post_tags.html %}
+  <br/>
+  {{ content }}
+</div>
+
+<div class="author-profile">
+  <div class="thumbnail">
+    <img src="https://www.gravatar.com/avatar/{{ author.gravatar }}?s=200">
+  </div>
+  <div class="description">
+    <h3>
+      {{ author.nickname }} ({{ author.fullname }})
+      {% if author.facebook %}
+        <a target="_blank" href="{{ author.facebook }}">
+          <i class="fa fa-facebook-official" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if author.github %}
+        <a target="_blank" href="https://github.com/{{ author.github }}">
+          <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+      {% if author.email %}
+        <a href="mailto:{{ author.email }}">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        </a>
+      {% endif %}
+    </h3>
+    <p markdown="1">{{ author.description | markdownify }}</p>
+  </div>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date: "%Y. %m. %d" }} | {{ author.nickname }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

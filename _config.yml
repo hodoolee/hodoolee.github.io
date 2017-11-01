@@ -1,0 +1,26 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               Hodoo
+tagline:             'First-in, Last-out'
+description:         ''
+url:                 https://hodoolee.github.io
+paginate:            50
+
+# Plugins
+plugins:             [jekyll-paginate]
+
+# Authors
+authors:
+  hodoo:
+    nickname: hodoo
+    fullname: hodoolee
+    description: 'First-in, Last-out'
+    gravatar: 18ee2cca28c7060f59b9fdf2ddfe47e5
+    email: public.hodoo@gmail.com
+    github: https://github.com/hodoolee
+
+# Github
+github:
+  repo:              https://github.com/hodoolee
