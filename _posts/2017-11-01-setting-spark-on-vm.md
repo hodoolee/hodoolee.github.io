@@ -1,19 +1,22 @@
 ---
 layout: post
-title: Setting Spark on VirtualMachine
+title: Setting up PySpark
 comments: true
-subdir: vm
+subdir: vm_spark
 tags:
 - Big Data
 ---
 
-## Note
+## Quick Note
 - Spark 2.1 is incompatible with Python 3.6
 - This will be resolved when Spark 2.2 is released
 - Python 3.5 will be used in this post to avoid issues
 
+## Set-up
+- [VirtualBox 5.2.2](https://www.virtualbox.org/wiki/Downloads)
+- [Ubuntu 16.04.3 LTS](https://www.ubuntu.com/download/desktop)
 
-![vm_1]({{ site.url }}/assets/images/{{ page.subdir }}/vm_1.png)
+{% include image.html subdir=page.subdir name='vm_1.png' caption='Picture 1: Installed Oracle VM VirtualBox Manager' %}
 
 Open a terminal and follow the commands.
 
@@ -34,12 +37,10 @@ $ sudo apt-get install scala
 $ pip3 install py4j
 ```
 
-![vm_3]({{ site.url }}/assets/images/{{ page.subdir }}/vm_3.png)
+Now, download [Apache Spark](spark.apache.org/downloads.html) and move it to the home folder.
 
-
-Download Spark file and move it to home folder.
-
-![vm_4]({{ site.url }}/assets/images/{{ page.subdir }}/vm_4.png)
+{% include image.html subdir=page.subdir name='vm_4.png' caption='Picture 2: Downloading Apache Spark with 2.1.0 version' %}
+ 
 
 ```bash
 # unzip the file
@@ -57,18 +58,12 @@ $ export PYSPARK_PYTHON=python3
 $ sudo chmod 777 spark-2.1.0-bin-hadoop2.7
 $ sudo chmod 777 spark-2.1.0-bin-hadoop2.7/python
 $ sudo chmod 777 spark-2.1.0-bin-hadoop2.7/python/pyspark
-
-$ python3
->>> import pyspark
->>> quit()
 ```
+
+Finally, open the Jupyter Notebook and let's have some fun!
 
 ```bash
 $ jupyter notebook
 ```
 
-In the notebook, let's import pyspark!
-
-![vm_5]({{ site.url }}/assets/images/{{ page.subdir }}/vm_5.png)
-
-{% include image.html subdir=page.subdir name='vm_5.png' caption='' %}
+{% include image.html subdir=page.subdir name='vm_5.png' caption='Picture 3: Importing PySpark in the Jupyter Notebook' %}
