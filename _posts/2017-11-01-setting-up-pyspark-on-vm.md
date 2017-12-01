@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting up PySpark
+title: Setting Up PySpark on VM
 comments: true
 subdir: vm_spark
 tags:
@@ -12,11 +12,11 @@ tags:
 - This will be resolved when Spark 2.2 is released
 - Python 3.5 will be used in this post to avoid issues
 
-## Set-up
+## Setting Up
 - [VirtualBox 5.2.2](https://www.virtualbox.org/wiki/Downloads)
 - [Ubuntu 16.04.3 LTS](https://www.ubuntu.com/download/desktop)
 
-{% include image.html subdir=page.subdir name='vm_1.png' caption='Picture 1: Installed Oracle VM VirtualBox Manager' %}
+{% include image.html subdir=page.subdir name='vm_1.png' caption='Picture 1: Install Oracle VM VirtualBox Manager' %}
 
 Open a terminal and follow the commands.
 
@@ -40,7 +40,6 @@ $ pip3 install py4j
 Now, download [Apache Spark](spark.apache.org/downloads.html) and move it to the home folder.
 
 {% include image.html subdir=page.subdir name='vm_4.png' caption='Picture 2: Downloading Apache Spark with 2.1.0 version' %}
- 
 
 ```bash
 # unzip the file
@@ -60,10 +59,24 @@ $ sudo chmod 777 spark-2.1.0-bin-hadoop2.7/python
 $ sudo chmod 777 spark-2.1.0-bin-hadoop2.7/python/pyspark
 ```
 
-Finally, open the Jupyter Notebook and let's have some fun!
+Finally, let's open the Jupyter Notebook!
 
 ```bash
 $ jupyter notebook
 ```
 
 {% include image.html subdir=page.subdir name='vm_5.png' caption='Picture 3: Importing PySpark in the Jupyter Notebook' %}
+
+However, there is one problem that PySpark works only if we are in the correct Spark directory folder. This can be fixed by using **findspark**.
+
+```bash
+# install findspark
+$ pip3 install findspark
+
+# now it works from any directory and we can apply this in the Notebook
+$ python3
+>>> import findspark
+>>> findspark.init('/home/david/spark-2.1.0-bin-hadoop2.7')
+>>> import pyspark
+>>> quit()
+```

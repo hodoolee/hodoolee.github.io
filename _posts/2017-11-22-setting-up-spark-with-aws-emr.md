@@ -1,6 +1,6 @@
 ---
 layout: post
-title: AWS EMR
+title: Setting Up Spark with AWS EMR
 comments: true
 subdir: aws_emr
 tags:
