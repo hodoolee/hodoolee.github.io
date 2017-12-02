@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Up Spark with AWS EMR
+title: Get Started with PySpark on AWS EMR
 comments: true
 subdir: aws_emr
 tags:

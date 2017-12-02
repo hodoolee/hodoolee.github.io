@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Up PySpark on VM
+title: Get Started with PySpark on VM
 comments: true
 subdir: vm_spark
 tags:
