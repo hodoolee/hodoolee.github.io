@@ -38,11 +38,28 @@ You can even use pure sequel to directly deal with the DataFrame.
 
 ![spark_df_5]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_5.png)
 
-## Spark DataFrame Basic Operations
+## Basic Operations
 
 ![spark_df_6]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_6.png)
 ![spark_df_7]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_7.png)
 ![spark_df_8]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_8.png)
 
+## Groupby and Aggregate Operations
 
+![spark_df_aggs_1]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_aggs_1.png)
+![spark_df_aggs_2]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_aggs_2.png)
+![spark_df_aggs_3]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_aggs_3.png)
+![spark_df_aggs_4]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_aggs_4.png)
+![spark_df_aggs_5]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_aggs_5.png)
 
+## Missing Data
+
+![spark_df_miss_1]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_miss_1.png)
+![spark_df_miss_2]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_miss_2.png)
+![spark_df_miss_3]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_miss_3.png)
+![spark_df_miss_4]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_miss_4.png)
+
+## Dates and Timestamps
+
+![spark_df_dates_1]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_dates_1.png)
+![spark_df_dates_2]({{ site.url }}/assets/images/{{ page.subdir }}/spark_df_dates_2.png)
