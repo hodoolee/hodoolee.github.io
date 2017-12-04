@@ -47,8 +47,6 @@ df.groupby(['cyl', 'gear']) \
   .agg({'mpg':'mean', 'disp':'min'})
 ```
 
-Okay. We get the point and now let's see what else is a little bit more diffrent.
-
 ```python
 # PySpark
 
@@ -86,6 +84,8 @@ df.fillna(0)
 df.groupby(['cyl', 'gear']) \
   .agg({'mpg':'mean', 'disp':'min'})
 ```
+
+Okay. We get the point and now let's see what else is a little bit more diffrent.
 
 ```python
 # Pandas
